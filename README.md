@@ -309,8 +309,8 @@ function showMessage(text, type) {
    node server.js
    ```
 4. **Open your browser:**
- 📝 Visit  to see the form [http://localhost:3000 ](http://localhost:3000)
- 👥 Visit  to see all submissions[http://localhost:3000/users ](http://localhost:3000/users)
+ - 📝 Visit  to see the form [http://localhost:3000 ](http://localhost:3000)
+ - 👥 Visit  to see all submissions[http://localhost:3000/users ](http://localhost:3000/users)
 
 ---
 
