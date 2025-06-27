@@ -299,11 +299,16 @@ function showMessage(text, type) {
    ```bash
    npm install
    ```
-2. **Start the server:**
+
+2. **Update MONGODB_URI **
+   ```bash
+   const MONGODB_URI = 'mongodb+srv://<USERNAME>:<PASSWORD>@cluster0.vutzzt4.mongodb.net/'; // Local MongoDB
+   ```
+3. **Start the server:**
    ```bash
    node server.js
    ```
-3. **Open your browser:**
+4. **Open your browser:**
    Visit [http://localhost:3000](http://localhost:3000)
 
 ---
