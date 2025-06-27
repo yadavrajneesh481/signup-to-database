@@ -65,7 +65,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // MongoDB connection string (replace with your actual MongoDB URL)
-const MONGODB_URI = 'mongodb+srv://yadavrajneesh481:yadavrajneesh481@cluster0.vutzzt4.mongodb.net/'; // Local MongoDB
+const MONGODB_URI = 'mongodb+srv://<USERNAME>:<PASSWORD>@cluster0.vutzzt4.mongodb.net/'; // Local MongoDB
 // For MongoDB Atlas (cloud), use: 'mongodb+srv://username:password@cluster.mongodb.net/formapp'
 
 // Middleware setup
