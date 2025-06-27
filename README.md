@@ -327,5 +327,3 @@ function showMessage(text, type) {
 
 ---
 
-## Author
-- Project generated and explained by Cascade AI
