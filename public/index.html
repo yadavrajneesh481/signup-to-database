@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form - Node.js & MongoDB</title>
+    
+    <!-- CSS styles for making the form look nice -->
+    <style>
+        /* Reset default browser styles and set base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Style the body with a nice background and font */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        /* Container for the form */
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        /* Style the main heading */
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        
+        /* Style form groups (label + input containers) */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        /* Style all labels */
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+            font-size: 14px;
+        }
+        
+        /* Style all input fields and textarea */
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        /* Change border color when input is focused */
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        /* Style the textarea specifically */
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        /* Style the submit button */
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            width: 100%;
+            transition: transform 0.2s ease;
+        }
+        
+        /* Button hover effect */
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* Style for success/error messages */
+        .message {
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        /* Success message styling */
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        /* Error message styling */
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        /* Loading state for button */
+        .loading {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main container for the form -->
+    <div class="form-container">
+        <!-- Page heading -->
+        <h1>Contact Form</h1>
+        
+        <!-- The actual form that will submit data to our server -->
+        <form id="contactForm">
+            
+            <!-- Name input field -->
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    required 
+                    placeholder="Enter your full name"
+                >
+            </div>
+            
+            <!-- Email input field -->
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required 
+                    placeholder="Enter your email address"
+                >
+            </div>
+            
+            <!-- Age input field -->
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input 
+                    type="number" 
+                    id="age" 
+                    name="age" 
+                    required 
+                    min="1" 
+                    max="120" 
+                    placeholder="Enter your age"
+                >
+            </div>
+            
+            <!-- Message textarea field -->
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea 
+                    id="message" 
+                    name="message" 
+                    required 
+                    placeholder="Enter your message here..."
+                ></textarea>
+            </div>
+            
+            <!-- Submit button -->
+            <button type="submit" class="submit-btn" id="submitBtn">
+                Send Message
+            </button>
+        </form>
+        
+        <!-- Container for displaying messages (success/error) -->
+        <div id="messageContainer"></div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
